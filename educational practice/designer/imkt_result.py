@@ -92,7 +92,7 @@ class Ui_Form(object):
         self.retranslateUi(Form)
 
         QMetaObject.connectSlotsByName(Form)
-    # setupUi
+
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
@@ -105,5 +105,3 @@ class Ui_Form(object):
         self.label_5.setText(QCoreApplication.translate("Form", u"- 243 \u0431\u0430\u043b\u043b\u0430 \u0434\u043b\u044f \u0442\u043e\u0447\u043d\u043e\u0433\u043e \u043f\u0440\u043e\u0445\u043e\u0436\u0434\u0435\u043d\u0438\u044f \u043d\u0430 \u0431\u044e\u0434\u0436\u0435\u0442", None))
         self.pushButton.setText(QCoreApplication.translate("Form", u"\u041d\u0430\u0437\u0430\u0434", None))
         self.label_6.setText("")
-    # retranslateUi
-

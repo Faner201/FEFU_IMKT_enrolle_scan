@@ -10,12 +10,14 @@ from designer.imkt_result import Ui_Form as Ui_Form_Result
 from data import *
 
 import json
+import re
 
 class InnInputWindow(QMainWindow):
     def __init__(self):
         super(InnInputWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.match = False
 
         QFontDatabase.addApplicationFont(r"/Users/fanfurick/Documents/code/educational practice/designer/Open_Sans (1)/static/OpenSans/OpenSans-Medium.ttf")
 
@@ -24,14 +26,18 @@ class InnInputWindow(QMainWindow):
 
     def request_date(self) -> None:
         if self.ui.input_inn.text() != "":
-            inn = {"information" : [{ 
-                "inn" : self.ui.input_inn.text()
-                }]}
-            with open('json_inf.json', 'w') as file:
-                json.dump(inn, file)
-            self.output = SelectionThreeFaculties()
-            self.close()
-            self.output.show()
+            self.match = re.fullmatch(r'\d{3}\D\d{3}\D\d{3}\s\d{2}', self.ui.input_inn.text())
+            if self.match:
+                inn = {"information" : [{ 
+                    "inn" : self.ui.input_inn.text()
+                    }]}
+                with open('json_inf.json', 'w') as file:
+                    json.dump(inn, file)
+                self.output = SelectionThreeFaculties()
+                self.close()
+                self.output.show()
+            else:
+                print('No')
 
 
 class SelectionThreeFaculties(QWidget):
@@ -168,7 +174,7 @@ class ResultWindow(QWidget):
         self.scores = ""
         self.place = ""
         self.total = ""
-        self.when_confirming = ""
+        self.when_confirming = 0
         self.total_points = ""
         self.total_score = 0
 
@@ -181,6 +187,8 @@ class ResultWindow(QWidget):
         self.request_dvfu_false_consent(json_inn)
         self.request_dvfu_true_consent()
 
+        self.ui.lb_faculte.setText("На факультете " + self.faculties)
+
         self.ui.label_2.setText("Ваши баллы - " + self.scores)
         self.ui.label_3.setText("- на " + str(self.place) + "/" + self.total + " месте")
         self.ui.label_4.setText("- на " + str(self.when_confirming) + "/" + self.total + " при подаче заявления")
@@ -192,11 +200,7 @@ class ResultWindow(QWidget):
 
 
     def request_dvfu_false_consent(self, json_inn) -> None:
-        self.current_data = request_data
-        self.current_data['trainingDirection'] = self.faculties
-        self.current_data['consent'] = 'false'
-        responce = requests.post('https://www.dvfu.ru/bitrix/services/main/ajax.php', params=request_parametrs, headers=user_agent, data=self.current_data).json()
-        self.data = responce.get('data')
+        self.data = self.request_dvfu('false')
         for applicans in self.data:
             if json_inn['information'][0]['inn'] == applicans.get('name') and applicans.get('category') == "На общих основаниях":
                 self.place = int(float(applicans.get('GENERALORDER')))
@@ -205,16 +209,22 @@ class ResultWindow(QWidget):
 
 
     def request_dvfu_true_consent(self) -> None:
+        self.data = self.request_dvfu('true')
+        for applicans in self.data:
+            if applicans.get('scoreSum') != '-' and applicans.get('category') == "На общих основаниях":
+                self.total_score += int(applicans.get('scoreSum'))
+            if applicans.get('category') == "На общих основаниях":
+                self.when_confirming += 1
+        self.when_confirming += 1
+        self.total_points = int(self.total_score / len(self.data))
+
+    
+    def request_dvfu(self, consent):
         self.current_data = request_data
         self.current_data['trainingDirection'] = self.faculties
-        self.current_data['consent'] = 'true'
+        self.current_data['consent'] = consent
         responce = requests.post('https://www.dvfu.ru/bitrix/services/main/ajax.php', params=request_parametrs, headers=user_agent, data=self.current_data).json()
-        self.data = responce.get('data')
-        for applicans in self.data:
-            if applicans.get('scoreSum') != '-':
-                self.total_score += int(applicans.get('scoreSum'))
-        self.total_points = int(self.total_score / len(self.data))
-        self.when_confirming = len(self.data) + 1
+        return responce.get('data')
 
 
     def go_back_selection(self) -> None:

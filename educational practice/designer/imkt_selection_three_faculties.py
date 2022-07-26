@@ -158,7 +158,6 @@ class Ui_Form(object):
         self.retranslateUi(Form)
 
         QMetaObject.connectSlotsByName(Form)
-    # setupUi
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
@@ -173,5 +172,4 @@ class Ui_Form(object):
         self.btn_faculty_ist.setText(QCoreApplication.translate("Form", u"09.03.02 \u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0438 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438", None))
         self.btn_faculty_ib.setText(QCoreApplication.translate("Form", u"10.03.01 \u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c", None))
         self.btn_faculty_kb.setText(QCoreApplication.translate("Form", u"10.05.01 \u041a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u043d\u0430\u044f \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c", None))
-    # retranslateUi
 

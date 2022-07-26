@@ -5,7 +5,7 @@ import os.path
 
 def main():
     app = QApplication(sys.argv)
-    if os.path.isfile(r"/Users/fanfurick/Documents/code/educational practice/json_inf.json"):
+    if os.path.isfile("json_inf.json"):
         programm = SelectionFirstFaculties()
     else:
         programm = InnInputWindow()
