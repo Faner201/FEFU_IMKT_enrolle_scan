@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #3380BA;</string>
+  </property>
+  <widget class="QWidget" name="logo" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>461</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#logo{
+border-bottom: 1.5px solid #ffffff;
+}</string>
+   </property>
+   <widget class="QLabel" name="text_logo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>461</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #ffffff</string>
+    </property>
+    <property name="text">
+     <string>FEFU IMKT Enrolle Scan</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="text_choice">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>90</y>
+     <width>461</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Open Sans</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #ffffff;</string>
+   </property>
+   <property name="text">
+    <string>Выберите 1 направление в котором хотите посмотреть своё место</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>260</y>
+     <width>82</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: #ffffff;
+	background-color: #76BAFA;
+	border-radius: 12px;
+}
+QPushButton:hover{
+	border:1.5px solid #000000
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Далее</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>300</y>
+     <width>301</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="main_window_recurce.qrc">:/resurce/imkt-logo (1).png</pixmap>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_facultyi_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>214</y>
+     <width>412</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: #000000;
+	background-color: #ffffff;
+	border-radius: 12px;
+}
+QPushButton:hover{
+	border:1.5px solid #000000
+}</string>
+   </property>
+   <property name="text">
+    <string>09.03.02 Информационные системы и технологии</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_faculty_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>177</y>
+     <width>412</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: #000000;
+	background-color: #ffffff;
+	border-radius: 12px;
+}
+QPushButton:hover{
+	border:1.5px solid #000000
+}</string>
+   </property>
+   <property name="text">
+    <string>02.03.01 Математика и компьютерные науки</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_faculty_1">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>412</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	color: #000000;
+	background-color: #ffffff;
+	border-radius: 12px;
+}
+QPushButton:hover{
+	border:1.5px solid #000000
+}</string>
+   </property>
+   <property name="text">
+    <string>09.03.03 Прикладная информатика</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="main_window_recurce.qrc"/>
+  <include location="../../../Program Files (x86)/Qt Designer/main_window_recurce.qrc"/>
+ </resources>
+ <connections/>
+</ui>

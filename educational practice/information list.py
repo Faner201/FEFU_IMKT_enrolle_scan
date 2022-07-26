@@ -1,6 +1,3 @@
-import imp
-from sqlite3 import apilevel
-from numpy import average
 import requests, json
 from data import faculties,user_agent, request_parametrs, request_data
 
