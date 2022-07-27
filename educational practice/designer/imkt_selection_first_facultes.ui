@@ -129,7 +129,7 @@ QPushButton:hover{
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_facultyi_3">
+  <widget class="QPushButton" name="btn_faculty_3">
    <property name="geometry">
     <rect>
      <x>20</x>

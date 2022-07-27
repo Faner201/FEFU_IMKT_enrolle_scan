@@ -115,7 +115,7 @@ border-radius: 25px</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="line_scores">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -133,7 +133,7 @@ border-radius: 25px</string>
      <string>- ваши баллы 215</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="line_place">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -151,7 +151,7 @@ border-radius: 25px</string>
      <string>- на 80/213 месте</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="line_statements">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -169,7 +169,7 @@ border-radius: 25px</string>
      <string>- на 10/55 при подаче заявления</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="line_sum">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -188,7 +188,7 @@ border-radius: 25px</string>
     </property>
    </widget>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="btn_back">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -221,7 +221,7 @@ QPushButton:hover{
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>90</x>
      <y>300</y>
      <width>301</width>
      <height>291</height>

@@ -1,6 +1,6 @@
 import sys
 from PySide6.QtWidgets import QApplication
-from window import SnlsInputWindow, SelectionFirstFaculties
+from window import SnilsInputWindow, SelectionFirstFaculties
 import os.path
 
 def main():
@@ -8,7 +8,7 @@ def main():
     if os.path.isfile("json_inf.json"):
         programm = SelectionFirstFaculties()
     else:
-        programm = SnlsInputWindow()
+        programm = SnilsInputWindow()
     programm.show()
     sys.exit(app.exec())
 

@@ -59,13 +59,13 @@ class Ui_Form(object):
         self.label_2.setGeometry(QRect(90, 300, 301, 291))
         self.label_2.setPixmap(QPixmap(u":/resurce/imkt-logo (1).png"))
         self.label_2.setAlignment(Qt.AlignCenter)
-        self.btn_facultyi_3 = QPushButton(Form)
-        self.btn_facultyi_3.setObjectName(u"btn_facultyi_3")
-        self.btn_facultyi_3.setGeometry(QRect(20, 214, 412, 26))
+        self.btn_faculty_3 = QPushButton(Form)
+        self.btn_faculty_3.setObjectName(u"btn_faculty_3")
+        self.btn_faculty_3.setGeometry(QRect(20, 214, 412, 26))
         font3 = QFont()
         font3.setPointSize(12)
-        self.btn_facultyi_3.setFont(font3)
-        self.btn_facultyi_3.setStyleSheet(u"QPushButton{\n"
+        self.btn_faculty_3.setFont(font3)
+        self.btn_faculty_3.setStyleSheet(u"QPushButton{\n"
 "	color: #000000;\n"
 "	background-color: #ffffff;\n"
 "	border-radius: 12px;\n"
@@ -123,7 +123,7 @@ class Ui_Form(object):
         self.text_choice.setText(QCoreApplication.translate("Form", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 1 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0432 \u043a\u043e\u0442\u043e\u0440\u043e\u043c \u0445\u043e\u0442\u0438\u0442\u0435 \u043f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0441\u0432\u043e\u0451 \u043c\u0435\u0441\u0442\u043e", None))
         self.btn_next.setText(QCoreApplication.translate("Form", u"\u0414\u0430\u043b\u0435\u0435", None))
         self.label_2.setText("")
-        self.btn_facultyi_3.setText(QCoreApplication.translate("Form", u"09.03.02 \u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0438 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438", None))
+        self.btn_faculty_3.setText(QCoreApplication.translate("Form", u"09.03.02 \u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0438 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438", None))
         self.btn_faculty_2.setText(QCoreApplication.translate("Form", u"02.03.01 \u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430 \u0438 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u043d\u044b\u0435 \u043d\u0430\u0443\u043a\u0438", None))
         self.btn_faculty_1.setText(QCoreApplication.translate("Form", u"09.03.03 \u041f\u0440\u0438\u043a\u043b\u0430\u0434\u043d\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0442\u0438\u043a\u0430", None))
         self.btn_remove.setText(QCoreApplication.translate("Form", u"\u0423\u0434\u0430\u043b\u0438\u0442\u044c", None))
