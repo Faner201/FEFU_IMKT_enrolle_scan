@@ -38,13 +38,13 @@ class Ui_Form(object):
         self.text_choice.setFont(font1)
         self.text_choice.setStyleSheet(u"color: #ffffff;")
         self.text_choice.setAlignment(Qt.AlignCenter)
-        self.pushButton = QPushButton(Form)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(190, 260, 82, 28))
+        self.btn_next = QPushButton(Form)
+        self.btn_next.setObjectName(u"btn_next")
+        self.btn_next.setGeometry(QRect(70, 260, 82, 28))
         font2 = QFont()
         font2.setPointSize(14)
-        self.pushButton.setFont(font2)
-        self.pushButton.setStyleSheet(u"QPushButton{\n"
+        self.btn_next.setFont(font2)
+        self.btn_next.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	background-color: #76BAFA;\n"
 "	border-radius: 12px;\n"
@@ -97,18 +97,35 @@ class Ui_Form(object):
 "QPushButton:hover{\n"
 "	border:1.5px solid #000000\n"
 "}")
+        self.btn_remove = QPushButton(Form)
+        self.btn_remove.setObjectName(u"btn_remove")
+        self.btn_remove.setGeometry(QRect(310, 260, 82, 28))
+        self.btn_remove.setFont(font2)
+        self.btn_remove.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	background-color: #76BAFA;\n"
+"	border-radius: 12px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"	border:1.5px solid #000000\n"
+"}\n"
+"\n"
+"")
 
         self.retranslateUi(Form)
 
         QMetaObject.connectSlotsByName(Form)
-
+    # setupUi
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.text_logo.setText(QCoreApplication.translate("Form", u"FEFU IMKT Enrolle Scan", None))
         self.text_choice.setText(QCoreApplication.translate("Form", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 1 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0432 \u043a\u043e\u0442\u043e\u0440\u043e\u043c \u0445\u043e\u0442\u0438\u0442\u0435 \u043f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0441\u0432\u043e\u0451 \u043c\u0435\u0441\u0442\u043e", None))
-        self.pushButton.setText(QCoreApplication.translate("Form", u"\u0414\u0430\u043b\u0435\u0435", None))
+        self.btn_next.setText(QCoreApplication.translate("Form", u"\u0414\u0430\u043b\u0435\u0435", None))
         self.label_2.setText("")
         self.btn_facultyi_3.setText(QCoreApplication.translate("Form", u"09.03.02 \u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0438 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438", None))
         self.btn_faculty_2.setText(QCoreApplication.translate("Form", u"02.03.01 \u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430 \u0438 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u043d\u044b\u0435 \u043d\u0430\u0443\u043a\u0438", None))
         self.btn_faculty_1.setText(QCoreApplication.translate("Form", u"09.03.03 \u041f\u0440\u0438\u043a\u043b\u0430\u0434\u043d\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0442\u0438\u043a\u0430", None))
+        self.btn_remove.setText(QCoreApplication.translate("Form", u"\u0423\u0434\u0430\u043b\u0438\u0442\u044c", None))
+    # retranslateUi
+
