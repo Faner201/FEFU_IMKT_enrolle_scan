@@ -26,7 +26,7 @@ class SnilsInputWindow(QMainWindow):
         self.ui.texn_inn.setText("Введите ваш СНИЛС")
 
         QFontDatabase.addApplicationFont(
-            r"/Users/fanfurick/Documents/code/educational practice/designer/Open_Sans (1)/static/OpenSans/OpenSans-Medium.ttf"
+            "designer/Open_Sans (1)/static/OpenSans/OpenSans-Medium.ttf"
         )
 
         self.ui.btn.clicked.connect(self.request_date)
@@ -94,7 +94,7 @@ class SelectionThreeFaculties(QWidget):
         ]
 
         QFontDatabase.addApplicationFont(
-            r"/Users/fanfurick/Documents/code/educational practice/designer/Open_Sans (1)/static/OpenSans/OpenSans-Medium.ttf"
+            "designer/Open_Sans (1)/static/OpenSans/OpenSans-Medium.ttf"
         )
 
         self.ui.btn_faculty_pi.clicked.connect(self.selection_faculties)
@@ -115,7 +115,6 @@ class SelectionThreeFaculties(QWidget):
                 if len(self.name_faculties) < 3:
                     self.name_faculties.append(btn.text())
                     getattr(self.ui, btn.objectName()).setStyleSheet(style_click)
-                    print(self.name_faculties)
 
     def deleting_faculty(self, btn) -> bool:
         for i in range(len(self.name_faculties)):
@@ -129,13 +128,13 @@ class SelectionThreeFaculties(QWidget):
         if len(self.name_faculties) == 3:
             selection = {"facultets": self.name_faculties}
             with open(
-                r"/Users/fanfurick/Documents/code/educational practice/json_inf.json",
+                "json_inf.json",
                 encoding="utf8",
             ) as file:
                 data = json.load(file)
                 data["information"].append(selection)
                 with open(
-                    r"/Users/fanfurick/Documents/code/educational practice/json_inf.json",
+                    "json_inf.json",
                     "w",
                     encoding="utf8",
                 ) as outfile:
@@ -151,7 +150,7 @@ class SelectionFirstFaculties(QWidget):
         self.ui = Ui_Form_First()
         self.ui.setupUi(self)
         with open(
-            "/Users/fanfurick/Documents/code/educational practice/json_inf.json"
+            "json_inf.json"
         ) as file:
             json_faculties = json.load(file)
         self.text_button_faculties(json_faculties)
@@ -164,7 +163,7 @@ class SelectionFirstFaculties(QWidget):
         self.ui.btn_remove.clicked.connect(self.remove_json)
 
         QFontDatabase.addApplicationFont(
-            r"/Users/fanfurick/Documents/code/educational practice/designer/Open_Sans (1)/static/OpenSans/OpenSans-Medium.ttf"
+           "designer/Open_Sans (1)/static/OpenSans/OpenSans-Medium.ttf"
         )
 
     def text_button_faculties(self, json_faculties) -> None:
@@ -211,7 +210,7 @@ class ResultWindow(QWidget):
         self.total_score = 0
 
         with open(
-            "/Users/fanfurick/Documents/code/educational practice/json_inf.json"
+            "json_inf.json"
         ) as file:
             json_inn = json.load(file)
         for number in faculties:
@@ -242,7 +241,7 @@ class ResultWindow(QWidget):
         self.ui.btn_back.clicked.connect(self.go_back_selection)
 
         QFontDatabase.addApplicationFont(
-            r"/Users/fanfurick/Documents/code/educational practice/designer/Open_Sans (1)/static/OpenSans/OpenSans-Medium.ttf"
+            "designer/Open_Sans (1)/static/OpenSans/OpenSans-Medium.ttf"
         )
 
     def request_dvfu_false_consent(self, json_inn) -> None:
@@ -302,7 +301,7 @@ class WindowDelete(QWidget):
 
     def delete_json(self) -> None:
         os.remove(
-            "/Users/fanfurick/Documents/code/educational practice/json_inf.json"
+            "json_inf.json"
         )
         self.output = SnilsInputWindow()
         self.close()
