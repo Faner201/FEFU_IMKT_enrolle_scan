@@ -18,7 +18,7 @@ import re
 
 
 class SnilsInputWindow(QMainWindow):
-    def __init__(self):
+    def __init__(self) -> None:
         super(SnilsInputWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
@@ -50,7 +50,7 @@ class SnilsInputWindow(QMainWindow):
 
 
 class WindowError(QWidget):
-    def __init__(self, flag):
+    def __init__(self, flag) -> None:
         self.number = flag
         super(WindowError, self).__init__()
         self.ui = Ui_Error()
@@ -64,19 +64,19 @@ class WindowError(QWidget):
             self.ui.line_2.setText("Пожалуйста выберите другой факультет")
             self.ui.btn_back.clicked.connect(self.back_selection)
 
-    def back_input(self):
+    def back_input(self) -> None:
         self.output = SnilsInputWindow()
         self.close()
         self.output.show()
 
-    def back_selection(self):
+    def back_selection(self) -> None:
         self.output = SelectionFirstFaculties()
         self.close()
         self.output.show()
 
 
 class SelectionThreeFaculties(QWidget):
-    def __init__(self):
+    def __init__(self) -> None:
         super(SelectionThreeFaculties, self).__init__()
         self.ui = Ui_Form_Three()
         self.ui.setupUi(self)
@@ -145,7 +145,7 @@ class SelectionThreeFaculties(QWidget):
 
 
 class SelectionFirstFaculties(QWidget):
-    def __init__(self):
+    def __init__(self) -> None:
         super(SelectionFirstFaculties, self).__init__()
         self.ui = Ui_Form_First()
         self.ui.setupUi(self)
@@ -196,7 +196,7 @@ class SelectionFirstFaculties(QWidget):
 
 
 class ResultWindow(QWidget):
-    def __init__(self, number):
+    def __init__(self, number) -> None:
         self.number_faculty = number
         super(ResultWindow, self).__init__()
         self.ui = Ui_Form_Result()
@@ -288,7 +288,7 @@ class ResultWindow(QWidget):
 
 
 class WindowDelete(QWidget):
-    def __init__(self):
+    def __init__(self) -> None:
         super(WindowDelete, self).__init__()
         self.ui = Ui_Delete()
         self.ui.setupUi(self)
