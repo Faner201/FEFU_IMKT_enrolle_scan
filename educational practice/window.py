@@ -117,8 +117,8 @@ class SelectionThreeFaculties(QWidget):
                     getattr(self.ui, btn.objectName()).setStyleSheet(style_click)
 
     def deleting_faculty(self, btn) -> bool:
-        for i in range(len(self.name_faculties)):
-            if btn.text() == self.name_faculties[i]:
+        for faculty in self.name_faculties:
+            if btn.text() == self.name_faculties[faculty]:
                 self.name_faculties.remove(btn.text())
                 getattr(self.ui, btn.objectName()).setStyleSheet(style)
                 return False
